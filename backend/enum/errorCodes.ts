@@ -1,0 +1,16 @@
+export enum ErrorCodes {
+  EmailNotFound = 100,
+  IncorrectPassword = 101,
+  EmailOrPasswordIsMissing = 102,
+  FirstNameMissing = 103,
+  LastNameMissing = 104,
+  EmailMissing = 105,
+  InvalidEmailAddress = 106,
+  PasswordTooShort = 108,
+  EmailAlreadyExists = 109,
+  EmailAlreadyVerified = 110,
+  VerificationCodeRequestLimit = 111,
+  VerificationCodeMissing = 112,
+  VerificationCodeExpired = 113,
+  VerificationCodeIncorrect = 114,
+}
