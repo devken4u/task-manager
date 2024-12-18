@@ -9,11 +9,11 @@ function VerifyEmailPage() {
   const emailVerification = emailVerificationMutation();
   const checkEmailVerification = checkEmailVerificationCodeMutation();
 
-  console.log(emailVerification.data?.data);
-  console.log(emailVerification.error?.response?.data);
+  // console.log(emailVerification.data?.data);
+  // console.log(emailVerification.error?.response?.data);
 
-  console.log(checkEmailVerification.data?.data);
-  console.log(checkEmailVerification.error?.response?.data);
+  // console.log(checkEmailVerification.data?.data);
+  // console.log(checkEmailVerification.error?.response?.data);
 
   return (
     <Authenticate redirectIfAuthenticated={false} unauthenticatedPath="/">
