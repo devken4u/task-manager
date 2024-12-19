@@ -5,6 +5,7 @@ import databaseConnection from "./config/databaseConnection";
 import userRoutes from "./routes/userRoutes";
 import emailVerificationRoutes from "./routes/emailVerificationRoutes";
 import cors from "cors";
+import { Request, Response } from "express";
 
 const app = express();
 
@@ -15,9 +16,14 @@ app.use(
     credentials: true,
   })
 );
+
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (_req: Request, res: Response) => {
+  res.send("hello");
+});
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/email-verification", emailVerificationRoutes);
