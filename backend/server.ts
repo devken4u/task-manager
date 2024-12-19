@@ -4,9 +4,11 @@ import express from "express";
 import databaseConnection from "./config/databaseConnection";
 import userRoutes from "./routes/userRoutes";
 import emailVerificationRoutes from "./routes/emailVerificationRoutes";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
