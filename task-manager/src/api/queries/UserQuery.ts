@@ -12,7 +12,9 @@ const authenticateQuery = () => {
     queryKey: ["authenticated"],
     queryFn: () =>
       axios
-        .get<IsAuthenticatedResponse>("/api/v1/users/is-authenticated")
+        .get<IsAuthenticatedResponse>(
+          "https://task-manager-three-zeta.vercel.app/api/v1/users/is-authenticated"
+        )
         .then((response) => response.data),
     gcTime: 0,
   });
