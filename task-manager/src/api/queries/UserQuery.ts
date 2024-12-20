@@ -1,6 +1,9 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
+
+const backendBaseUrl = import.meta.env.BACKEND_BASE_URL;
+
 type IsAuthenticatedResponse = {
   isAuthenticated: boolean;
   role: "user" | "admin";
@@ -13,7 +16,7 @@ const authenticateQuery = () => {
     queryFn: () =>
       axios
         .get<IsAuthenticatedResponse>(
-          "https://task-manager-three-zeta.vercel.app/api/v1/users/is-authenticated"
+          `${backendBaseUrl}/api/v1/users/is-authenticated`
         )
         .then((response) => response.data),
     gcTime: 0,

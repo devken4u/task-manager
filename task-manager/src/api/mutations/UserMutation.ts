@@ -2,10 +2,12 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { LoginData, RegisterData } from "../../types";
 
+const backendBaseUrl = import.meta.env.BACKEND_BASE_URL;
+
 const loginMutation = () => {
   return useMutation({
     mutationFn: (account: LoginData) => {
-      return axios.post("/api/v1/users/login", {
+      return axios.post(`${backendBaseUrl}/api/v1/users/login`, {
         email: account.email,
         password: account.password,
       });
@@ -16,7 +18,7 @@ const loginMutation = () => {
 const logoutMutation = () => {
   return useMutation({
     mutationFn: () => {
-      return axios.post("/api/v1/users/logout");
+      return axios.post(`${backendBaseUrl}/api/v1/users/logout`);
     },
   });
 };
@@ -24,7 +26,7 @@ const logoutMutation = () => {
 const registerMutation = () => {
   return useMutation({
     mutationFn: (data: RegisterData) => {
-      return axios.post("/api/v1/users/register", {
+      return axios.post(`{${backendBaseUrl}/api/v1/users/register`, {
         email: data.email,
         firstname: data.firstname,
         lastname: data.lastname,

@@ -1,10 +1,16 @@
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 
+
+const backendBaseUrl = import.meta.env.BACKEND_BASE_URL;
+
+
 const emailVerificationMutation = () => {
   return useMutation({
     mutationFn: () => {
-      return axios.post("/api/v1/email-verification/request-code");
+      return axios.post(
+        `${backendBaseUrl}/api/v1/email-verification/request-code`
+      );
     },
   });
 };
@@ -12,9 +18,12 @@ const emailVerificationMutation = () => {
 const checkEmailVerificationCodeMutation = () => {
   return useMutation({
     mutationFn: (code: string) => {
-      return axios.post("/api/v1/email-verification/verify-code", {
-        code,
-      });
+      return axios.post(
+        `${backendBaseUrl}/api/v1/email-verification/verify-code`,
+        {
+          code,
+        }
+      );
     },
   });
 };
