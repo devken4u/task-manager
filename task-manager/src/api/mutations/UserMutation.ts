@@ -3,6 +3,8 @@ import axios from "axios";
 import { LoginData, RegisterData } from "../../types";
 
 const backendBaseUrl = import.meta.env.VITE_BACKEND_BASE_URL;
+console.log(backendBaseUrl);
+console.log("Constructed URL:", `${backendBaseUrl}/api/v1/users/login`);
 
 const loginMutation = () => {
   return useMutation({
@@ -26,7 +28,7 @@ const logoutMutation = () => {
 const registerMutation = () => {
   return useMutation({
     mutationFn: (data: RegisterData) => {
-      return axios.post(`{${backendBaseUrl}/api/v1/users/register`, {
+      return axios.post(`${backendBaseUrl}/api/v1/users/register`, {
         email: data.email,
         firstname: data.firstname,
         lastname: data.lastname,
