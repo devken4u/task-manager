@@ -25,3 +25,4 @@ task-manager/*.ntvs*
 task-manager/*.njsproj
 task-manager/*.sln
 task-manager/*.sw?
+task-manager/.env
