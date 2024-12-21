@@ -9,21 +9,13 @@ import { Request, Response } from "express";
 
 const app = express();
 
-// app.use(
-//   cors({
-//     origin: [
-//       "https://task-manager-frontend-eight-omega.vercel.app",
-//       "http://localhost:5173",
-//     ],
-//     methods: ["POST", "GET"],
-//     credentials: true,
-//   })
-// );
-
 app.use(
   cors({
-    origin: "*",
-    methods: ["POST", "GET", "OPTIONS"],
+    origin: [
+      "https://task-manager-frontend-eight-omega.vercel.app",
+      "http://localhost:5173",
+    ],
+    methods: ["POST", "GET"],
     credentials: true,
   })
 );

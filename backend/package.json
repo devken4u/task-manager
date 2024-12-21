@@ -5,7 +5,7 @@
   "main": "server.ts",
   "scripts": {
     "build": "tsc",
-    "dev": "concurrently \"npx tsc -w\" \"nodemon dist/server.js\""
+    "dev": "concurrently \"npx tsc -w\" \"nodemon dist/index.js\""
   },
   "author": "",
   "license": "ISC",

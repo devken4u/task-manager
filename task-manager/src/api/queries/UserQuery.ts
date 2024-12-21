@@ -15,7 +15,10 @@ const authenticateQuery = () => {
     queryFn: () =>
       axios
         .get<IsAuthenticatedResponse>(
-          `${backendBaseUrl}/api/v1/users/is-authenticated`
+          `${backendBaseUrl}/api/v1/users/is-authenticated`,
+          {
+            withCredentials: true,
+          }
         )
         .then((response) => response.data),
     gcTime: 0,
