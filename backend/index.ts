@@ -15,7 +15,7 @@ app.use(
       "https://task-manager-frontend-eight-omega.vercel.app",
       "http://localhost:5173",
     ],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
     credentials: true,
   })
 );

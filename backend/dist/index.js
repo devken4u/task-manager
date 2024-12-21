@@ -25,7 +25,7 @@ app.use((0, cors_1.default)({
         "https://task-manager-frontend-eight-omega.vercel.app",
         "http://localhost:5173",
     ],
-    methods: ["POST", "GET"],
+    methods: ["POST", "GET", "OPTIONS"],
     credentials: true,
 }));
 app.use((0, cookie_parser_1.default)());
