@@ -1,9 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 
-
-const backendBaseUrl = import.meta.env.BACKEND_BASE_URL;
-
+const backendBaseUrl = import.meta.env.VITE_BACKEND_BASE_URL;
 
 const emailVerificationMutation = () => {
   return useMutation({

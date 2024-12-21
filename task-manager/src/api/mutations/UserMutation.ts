@@ -2,7 +2,7 @@ import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { LoginData, RegisterData } from "../../types";
 
-const backendBaseUrl = import.meta.env.BACKEND_BASE_URL;
+const backendBaseUrl = import.meta.env.VITE_BACKEND_BASE_URL;
 
 const loginMutation = () => {
   return useMutation({
