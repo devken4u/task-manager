@@ -7,16 +7,10 @@ const backendBaseUrl = import.meta.env.VITE_BACKEND_BASE_URL;
 const loginMutation = () => {
   return useMutation({
     mutationFn: (account: LoginData) => {
-      return axios.post(
-        `${backendBaseUrl}/api/v1/users/login`,
-        {
-          email: account.email,
-          password: account.password,
-        },
-        {
-          withCredentials: true,
-        }
-      );
+      return axios.post(`${backendBaseUrl}/api/v1/users/login`, {
+        email: account.email,
+        password: account.password,
+      });
     },
   });
 };
