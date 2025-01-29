@@ -13,7 +13,7 @@ const app = express();
 app.use(
   cors({
     origin: [
-      "https://task-manager-frontend-eight-omega.vercel.app",
+      "https://task-manager-frontend-ten-lyart.vercel.app",
       "http://localhost:5173",
     ],
     methods: ["POST", "GET", "DELETE", "PUT", "OPTIONS"],

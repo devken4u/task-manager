@@ -23,7 +23,7 @@ const cors_1 = __importDefault(require("cors"));
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)({
     origin: [
-        "https://task-manager-frontend-eight-omega.vercel.app",
+        "https://task-manager-frontend-ten-lyart.vercel.app",
         "http://localhost:5173",
     ],
     methods: ["POST", "GET", "DELETE", "PUT", "OPTIONS"],
