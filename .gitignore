@@ -1,0 +1,28 @@
+backend/node_modules/
+backend/.env
+
+# Logs
+task-manager/logs
+task-manager/*.log
+task-manager/npm-debug.log*
+task-manager/yarn-debug.log*
+task-manager/yarn-error.log*
+task-manager/pnpm-debug.log*
+task-manager/lerna-debug.log*
+
+task-manager/node_modules
+task-manager/dist
+task-manager/dist-ssr
+task-manager/*.local
+
+# Editor directories and files
+task-manager/.vscode/*
+task-manager/!.vscode/extensions.json
+task-manager/.idea
+task-manager/.DS_Store
+task-manager/*.suo
+task-manager/*.ntvs*
+task-manager/*.njsproj
+task-manager/*.sln
+task-manager/*.sw?
+task-manager/.env

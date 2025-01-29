@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply text-zinc-900;
+}
+
+.gradient {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 0.4) 0%,
+    rgba(148, 187, 233, 0.4) 100%
+  );
+}
