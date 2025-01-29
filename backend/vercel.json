@@ -10,16 +10,7 @@
     {
       "src": "/(.*)",
       "dest": "/",
-      "methods": ["GET", "POST", "OPTIONS", "DELETE", "PUT"],
-      "headers": {
-        "Access-Control-Allow-Origin": [
-          "http://localhost:5173",
-          "https://task-manager-frontend-ten-lyart.vercel.app"
-        ],
-        "Access-Control-Allow-Methods": "GET, POST, OPTIONS, DELETE, PUT",
-        "Access-Control-Allow-Credentials": "true",
-        "Access-Control-Allow-Headers": "Content-Type, Authorization"
-      }
+      "methods": ["GET", "POST", "OPTIONS", "DELETE", "PUT"]
     }
   ]
 }
