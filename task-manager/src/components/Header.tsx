@@ -30,16 +30,17 @@ function Greeting() {
           </h1>
           {authenticate.data?.role === "user" && (
             <>
-              {status.data?.taskStatus ? (
+              {status.data?.taskStatus && (
                 <p className="text-base sm:text-xl">
                   You have {status.data.taskStatus.pending} active task(s).
                 </p>
-              ) : (
-                <p className="text-base sm:text-xl">
-                  Please login to see your tasks.
-                </p>
               )}
             </>
+          )}
+          {authenticate.data?.isAuthenticated === false && (
+            <p className="text-base sm:text-xl">
+              Please login to see your tasks.
+            </p>
           )}
         </div>
       </div>
